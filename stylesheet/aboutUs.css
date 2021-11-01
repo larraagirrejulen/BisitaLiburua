@@ -1,0 +1,46 @@
+body {
+	margin: 0px;
+}
+.aboutUs{
+	background-image: url('https://www.ehu.eus/documents/340468/0/_38J5365+%281%29.jpg/931f5fea-a8b5-19bc-49dd-096c1aac3805?t=1617095933868');
+	background-size: 100%;
+	background-position: center;
+	text-align: center;
+	align-content: center;
+	padding: 3.5em 0em;
+
+}
+.aboutUs h1{
+	font-style: italic;
+	color: white;
+}
+.aboutUs .hero{
+	font-size: 120%;
+	margin: 10em 15em;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.7);;
+	color: white;
+}
+
+p{
+	font-family: "Lucida Console", Monospace;
+	margin: 30px 15px;
+	color: #031D88;
+}
+
+ul{
+	font-family: "Lucida Console", Monospace;
+	color: #031D88;
+}
+
+li{
+	margin: 5px 0px;
+}
+
+.irudiak{
+	padding: 285px 45px;
+}
+
+.irudi1{
+	border: 3px solid green;
+}
