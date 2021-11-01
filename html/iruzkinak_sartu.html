@@ -5,6 +5,8 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_sartu.css"/>
 		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
+		<script src='../scripts/formularioa_balioztatu.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<header class="home">
@@ -19,7 +21,7 @@
 		</header>
 		<section class="form_section" id="form_section">
 			<h1>Iruzkinak sartzeko, azpiko formularioa bete ezazu</h1>
-			<form>
+			<form action="">
 				<label for='izena'>Zure izena <font color='red'>(*)</font></label>
 		        <input type='text' name='izena' id='izena' value=""><br>
 
@@ -32,7 +34,7 @@
 		        <label for='iruzkina'>Sartu zure iruzkina <font color='red'>(*)</font></label>
 		        <textarea name='iruzkina' id='iruzkina'></textarea><br>
 		        	            
-		        <input type='submit' name='bidali' id='bidali' value='Sartu zure iruzkina'>
+		        <input type='submit' name='bidali' id='bidali' onclick='formularioa_balioztatu()' value='Sartu zure iruzkina' >
 			</form>
 		</section>
 	</body>
