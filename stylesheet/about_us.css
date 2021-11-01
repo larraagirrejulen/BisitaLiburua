@@ -1,7 +1,7 @@
 body {
 	margin: 0px;
 }
-.aboutUs{
+.about_us{
 	background-image: url('https://www.ehu.eus/documents/340468/0/_38J5365+%281%29.jpg/931f5fea-a8b5-19bc-49dd-096c1aac3805?t=1617095933868');
 	background-size: 100%;
 	background-position: center;
@@ -10,11 +10,11 @@ body {
 	padding: 3.5em 0em;
 
 }
-.aboutUs h1{
+.about_us h1{
 	font-style: italic;
 	color: white;
 }
-.aboutUs .hero{
+.about_us .hero{
 	font-size: 120%;
 	margin: 10em 15em;
 	padding: 10px;

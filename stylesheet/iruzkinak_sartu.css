@@ -1,0 +1,10 @@
+body{
+	margin: 0px;
+}
+
+.form_section{
+	margin-top: 3em;
+	padding: 5em;
+	background: rgba(255, 255, 255, 1.0);
+	text-align: center;
+}
