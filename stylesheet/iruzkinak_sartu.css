@@ -4,7 +4,47 @@ body{
 
 .form_section{
 	margin-top: 3em;
-	padding: 5em;
+	padding: 4em;
 	background: rgba(255, 255, 255, 1.0);
-	text-align: center;
+	text-align: left;
+}
+
+.titulu1{
+	background: grey;
+}
+
+.izena {
+	padding: 5px 5px
+}
+
+.text1{
+	margin: 5px 5px
+}
+
+.text2{
+	margin: 5px 5px
+}
+
+.text3{
+	margin: 5px 5px
+}
+
+.textarea1{
+	margin: 10px 10px
+}
+
+.posta{
+	padding: 0px 5px
+}
+
+.publikoa{
+	padding: 0px 5px
+}
+
+.botoia{
+	margin: 20px 5px
+}
+
+.iruzkina{
+	margin: 10px 5px
 }

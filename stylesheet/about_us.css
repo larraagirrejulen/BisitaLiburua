@@ -38,9 +38,21 @@ li{
 }
 
 .irudiak{
-	padding: 285px 45px;
+	padding: 155px 45px;
 }
 
 .irudi1{
 	border: 3px solid green;
+	margin: 0px 45px;
 }
+
+.irudi2{
+	border: 3px solid red;
+	margin: 0px 45px;
+}
+
+.irudi3{
+	border: 3px solid blue;
+	margin: 0px 45px;
+}
+
