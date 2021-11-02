@@ -1,50 +1,29 @@
 body{
 	margin: 0px;
+	background-image: url("../images/iruzkinak_sartu.jpg");
+	background-size: 100%;
+	color: white;
 }
 
 .form_section{
-	margin-top: 3em;
-	padding: 4em;
-	background: rgba(255, 255, 255, 1.0);
-	text-align: left;
+	padding: 14em;
 }
 
-.titulu1{
-	background: grey;
+.content_container{
+	margin: 0em 16em;
+	padding: 5em;
+	border-radius: 10%;
+	background: rgba(0, 0, 0, 0.85);
+	text-align: center;
 }
 
-.izena {
-	padding: 5px 5px
+.form_container{
+	vertical-align: middle;
+	border: 1px solid white;
+	padding: 1em;
+	margin: 0em 3em;
 }
 
-.text1{
-	margin: 5px 5px
-}
-
-.text2{
-	margin: 5px 5px
-}
-
-.text3{
-	margin: 5px 5px
-}
-
-.textarea1{
-	margin: 10px 10px
-}
-
-.posta{
-	padding: 0px 5px
-}
-
-.publikoa{
-	padding: 0px 5px
-}
-
-.botoia{
-	margin: 20px 5px
-}
-
-.iruzkina{
-	margin: 10px 5px
+.form_container input, label{
+	margin: 5px;
 }
