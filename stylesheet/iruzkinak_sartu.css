@@ -25,6 +25,10 @@ body{
 	margin: 0em 3em;
 }
 
+.form_container #publikoa, #lbl_publikoa{
+	display: none;
+}
+
 .form_container input, label{
 	margin: 5px;
 }

@@ -1,12 +1,10 @@
-function showCheckbox(){
+function show_checkbox(){
 	posta = $("#posta").val();
 	if(posta.length > 0){
-		document.getElementById("posta").disabled = false;
+		document.getElementById("publikoa").style.display = 'block';
+		document.getElementById("lbl_publikoa").style.display = 'block';
 	}else{
-		document.getElementById("posta").disabled = true;
+		document.getElementById("publikoa").style.display = 'none';
+		document.getElementById("lbl_publikoa").style.display = 'none';
 	}
 }
-
-console.log($("#posta"))
-
-$("#posta").addEventListenner("change", showCheckbox());
