@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_sartu.css"/>
 		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
 		<script src='../scripts/formularioa_balioztatu.js'></script>
+		<script src='../scripts/checkbox.js'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -13,7 +14,7 @@
 			<nav class="navBar">
 				<a class="active" href="main.html">BISITA-LIBURUA</a>
 				<a href="iruzkinak_sartu.html">Iruzkinak Sartu</a>
-				<a href="main.html">Iruzkinak Ikusi</a>
+				<a href="iruzkinak_ikusi.html">Iruzkinak Ikusi</a>
 				<div class="navRight">
 					<a href="about_us.html">ABOUT US</a>
 				</div>
@@ -36,7 +37,7 @@
 				        <label for='iruzkina'>Sartu zure iruzkina <font color='red'>(*)</font></label>
 				        <textarea name='iruzkina' id='iruzkina'></textarea><br>
 				        	            
-				        <input type='submit' name='bidali' id='bidali' value='Sartu zure iruzkina'>
+				        <input type='submit' name='bidali' id='bidali' onclick='formularioa_balioztatu()' value='Sartu zure iruzkina'>
 					</form>
 				</div>			
 			</div>
