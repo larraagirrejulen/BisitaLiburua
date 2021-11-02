@@ -1,19 +1,27 @@
 function formularioa_balioztatu(){
+	formulario_colorea_eguneratu();
 	izena = $("#izena").val();
 	posta = $("#posta").val();
 	iruzkina = $("#iruzkina").val();
-	if(izena.length > 0 && iruzkina.length > 0){
-		if(posta.length > 0){
-			if(!posta_balioztatu(posta)){
-				alert("Posta desegokia!");
+	if(izena.length > 0){
+		if(iruzkina.length > 0){
+			if(posta.length > 0){
+				if(!posta_balioztatu(posta)){
+					document.getElementById("posta").style.borderColor = "red";
+					alert("Posta desegokia!");
+				}else{
+					return true;
+				}
 			}else{
 				return true;
 			}
 		}else{
-			return true;
+			document.getElementById("iruzkina").style.borderColor = "red";
+			alert("Sartu nahi duzun iruzkina adierazi behar duzu!");
 		}
 	}else{
-		alert("Derrigorrezko parametroak bete behar dituzu!");
+		document.getElementById("izena").style.borderColor = "red";
+		alert("Zure izena adierazi behar duzu!");
 	}
 	return false;
 }
@@ -27,4 +35,10 @@ function posta_balioztatu(posta){
 		}
 	}
 	return false;
+}
+
+function formulario_colorea_eguneratu(){
+	document.getElementById("iruzkina").style.borderColor = "black";
+	document.getElementById("izena").style.borderColor = "black";
+	document.getElementById("posta").style.borderColor = "black";
 }
