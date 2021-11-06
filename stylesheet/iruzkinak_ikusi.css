@@ -11,8 +11,8 @@ body{
 }
 
 .table_container{
-	margin: 0em 16em;
-	padding: 5em;
+	margin: 0em 23em;
+	padding: 3em;
 	border-radius: 10%;
 	background: rgba(0, 0, 0, 0.85);
 	text-align: center;
@@ -26,4 +26,10 @@ body{
 
 .taula th, td{
 	border: 1px solid black;
+}
+
+.titulu1 {
+	color: white;
+	top: 8px;
+	padding-bottom: 1em;
 }
