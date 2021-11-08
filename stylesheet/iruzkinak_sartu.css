@@ -18,18 +18,18 @@ body{
 	text-align: center;
 }
 
-.form{
+.formularioa{
 	display: block;
 	align-content: center;
 	padding: 1em;
 	margin: 0em 3em;
 }
 
-.form #publikoa, #lbl_publikoa{
+.formularioa #publikoa, #lbl_publikoa{
 	display: none;
 }
 
-.form input, label, textarea{
+.formularioa input, label, textarea{
 	margin: 5px;
 	vertical-align: middle;
 }
