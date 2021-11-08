@@ -3,16 +3,17 @@ body{
 	background-image: url("../images/iruzkinak_sartu.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
-	color: black;
 }
 
 .table_section{
-	padding: 14em;
+	text-align: center;
+	align-content: center;
+	padding: 3.5em 0em;;
 }
 
 .table_container{
-	margin: 0em 23em;
-	padding: 3em;
+	margin: 10em 15em;
+	padding: 10px;
 	border-radius: 10%;
 	background: rgba(0, 0, 0, 0.85);
 	text-align: center;

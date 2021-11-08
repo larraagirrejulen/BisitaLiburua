@@ -3,32 +3,37 @@ body{
 	background-image: url("../images/iruzkinak_sartu.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
-	color: white;
 }
 
 .form_section{
-	padding: 14em;
+	text-align: center;
+	align-content: center;
+	padding-top: 15em;
 }
 
 .content_container{
-	margin: 0em 16em;
-	padding: 5em;
-	border-radius: 10%;
-	background: rgba(0, 0, 0, 0.85);
+	margin: 0em 15em;
+	padding: 1em;
+	background: rgba(255, 255, 255, 0.90);
 	text-align: center;
 }
 
-.form_container{
-	vertical-align: middle;
-	border: 1px solid white;
+.form{
+	display: block;
+	align-content: center;
 	padding: 1em;
 	margin: 0em 3em;
 }
 
-.form_container #publikoa, #lbl_publikoa{
+.form #publikoa, #lbl_publikoa{
 	display: none;
 }
 
-.form_container input, label{
+.form input, label, textarea{
 	margin: 5px;
+	vertical-align: middle;
+}
+
+#bidali{
+	margin-top: 2em;
 }

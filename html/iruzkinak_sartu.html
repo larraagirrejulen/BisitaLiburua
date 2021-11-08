@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SZA 3.Gaiko lehen laborategia</title>
+		<title>Bisita-Liburua</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_sartu.css"/>
 		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
 		<script src='../scripts/formularioa_balioztatu.js'></script>
-		<script src='../scripts/checkbox.js'></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
@@ -18,28 +17,26 @@
 				<div class="navRight">
 					<a href="about_us.html">ABOUT US</a>
 				</div>
-			</nav>		
+			</nav>
 		</header>
 		<section class="form_section" id="form_section">
 			<div class="content_container">
 				<h1>Iruzkinak sartzeko, azpiko formularioa bete ezazu</h1>
-				<div class="form_container">
-					<form>
-						<label for='izena'>Zure izena <font color='red'>(*)</font></label>
-				        <input type='text' name='izena' id='izena' value=""><br>
+				<form class="form">
+					<label for='izena'>Zure izena <font color='red'>(*)</font></label>
+			        <input type='text' name='izena' id='izena' value="" onchange="izena_balioztatu()"><br>
 
-				        <label for='posta'>Zure posta elektronikoa </label>
-				        <input type='text' name='posta' id='posta' value="" onchange="show_checkbox()"><br>
+			        <label for='posta'>Zure posta elektronikoa </label>
+			        <input type='text' name='posta' id='posta' value="" onchange="posta_balioztatu()"><br>
 
-				        <label id='lbl_publikoa' for='publikoa'>Zure e-posta publikoa izan dadin nahi duzu?</label>
-				        <input type='checkbox' name='publikoa' id='publikoa'><br>
+							<label id='lbl_publikoa' for='publikoa'>Zure e-posta publikoa izan dadin nahi duzu?</label>
+							<input type='checkbox' name='publikoa' id='publikoa'><br>
 
-				        <label for='iruzkina'>Sartu zure iruzkina <font color='red'>(*)</font></label>
-				        <textarea name='iruzkina' id='iruzkina'></textarea><br>
-				        	            
-				        <input type='button' name='bidali' id='bidali' onclick='formularioa_balioztatu()' value='Sartu zure iruzkina'>
-					</form>
-				</div>			
+			        <label for='iruzkina'>Sartu zure iruzkina <font color='red'>(*)</font></label>
+			        <textarea name='iruzkina' id='iruzkina' onchange="iruzkina_balioztatu()"></textarea><br>
+
+			        <input type='button' name='bidali' id='bidali' onclick='formularioa_balioztatu()' value='Sartu zure iruzkina'>
+				</form>
 			</div>
 		</section>
 	</body>
