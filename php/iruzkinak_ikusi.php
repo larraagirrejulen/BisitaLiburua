@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>SZA 3.Gaiko lehen laborategia</title>
@@ -11,17 +10,17 @@
 	<body>
 		<header class="home">
 			<nav class="navBar">
-				<a class="active" href="main.html">BISITA-LIBURUA</a>
-				<a href="iruzkinak_sartu.html">Iruzkinak Sartu</a>
-				<a href="iruzkinak_ikusi.html">Iruzkinak Ikusi</a>
+				<a class="active" href="../html/main.html">BISITA-LIBURUA</a>
+				<a href="../html/iruzkinak_sartu.html">Iruzkinak Sartu</a>
+				<a href="iruzkinak_ikusi.php">Iruzkinak Ikusi</a>
 				<div class="navRight">
-					<a href="about_us.html">ABOUT US</a>
+					<a href="../html/about_us.html">ABOUT US</a>
 				</div>
 			</nav>
 		</header>
 		<section class="table_section" id="table_section">
 			<div class="table_container">
-				<h1 class = "titulu1">IRUZKINAK</h1>
+				<h1 class="titulu1">IRUZKINAK</h1>
 				<table class="taula">
 					<thead>
 						<tr>

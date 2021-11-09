@@ -3,7 +3,6 @@ body{
 	background-image: url("../images/iruzkinak_sartu.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
-	color: black;
 }
 
 .table_section{
@@ -13,20 +12,22 @@ body{
 }
 
 .table_container{
-	margin: 0em 23em;
-	padding: 3em;
-	border-radius: 10%;
-	background: rgba(0, 0, 0, 0.85);
+	margin: 0em 15em;
+	padding: 1em;
+	background: rgba(255, 255, 255, 0.90);
 	text-align: center;
 }
 
 .taula{
+	padding: 1em;
+	margin: 2em 3em;
 	background: white;
 	border: 1px solid black;
 	border-collapse: collapse;
 }
 
 .taula th, td{
+	padding: 6px;
 	border: 1px solid black;
 }
 
@@ -36,20 +37,6 @@ body{
 
 .taula td{
 	background-color: #D4F7F7;
-}
-
-.titulu1 {
-	color: white;
-	top: 8px;
-	padding-bottom: 1em;
-}
-
-.Iruzkin {
-	padding: 0em 6em;
-}
-
-.iruzkinak{
-	padding: 2em 6em;
 }
 
 td:hover{
