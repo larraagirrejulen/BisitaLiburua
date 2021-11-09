@@ -24,15 +24,28 @@
 				<table class="taula">
 					<thead>
 						<tr>
-							<th>Izena</th><th>Posta</th><th class = "Iruzkin">Iruzkina</th>
+							<th>Data</th><th>Izena</th><th>Posta</th><th>Iruzkina</th>
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+							$bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
+							foreach ($bisitak-> children() as $bisita){
+
+									$data = $bisita["data"];
+									$izena = $bisita["izena"];
+									$iruzkina = $bisita["iruzkina"];
+
+									echo "<tr>";
+									echo "<td>$data</td><td>$izena</td><td>$iruzkina</td>";
+									echo "</tr>";
+							}
+						 ?>
 						<tr>
-							<td>Julen</td><td>julen@gmail.com</td><td class = "iruzkinak">iruzkin1</td>
+							<td>Julen</td><td>julen@gmail.com</td><td>iruzkin1</td>
 						</tr>
 						<tr>
-							<td>Xabier</td><td>xabier@gmail.com</td><td class = "iruzkinak">iruzkin2</td>
+							<td>Xabier</td><td>xabier@gmail.com</td><td>iruzkin2</td>
 						</tr>
 					</tbody>
 				</table>
