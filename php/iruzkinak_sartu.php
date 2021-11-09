@@ -48,12 +48,10 @@
                $posta = null;
              }
              $baliozkoak = formularioa_balioztatu($izena, $iruzkina, $posta);
-           }else{
-             echo "<p>naitaezko parametroak definitu gabe</p>";
            }
 
            if($baliozkoak){
-             echo "<p>dena ondo</p>";
+             echo "<p>parametroak ondo</p>";
 						 try {
                 $bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
 								$bisitak->attributes()->azkenid = ((int) $bisitak->attributes()->azkenid) + 1;
@@ -85,7 +83,7 @@
               }
 
            }else{
-						 echo "<p>posta gaizki dago!</p>";
+						 echo "<p>parametroak gaizki!</p>";
 					 }
          ?>
       </div>
