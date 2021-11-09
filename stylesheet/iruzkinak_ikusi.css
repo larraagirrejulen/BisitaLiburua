@@ -13,16 +13,17 @@ body{
 
 .table_container{
 	margin: 0em 15em;
-	padding: 1em;
+	padding: 2em;
 	background: rgba(255, 255, 255, 0.90);
 	text-align: center;
+	align-items: center;
+	align-content: center;
 }
 
 .taula{
+	display: inline-block;
 	padding: 1em;
-	margin: 2em 3em;
-	background: white;
-	border: 1px solid black;
+	margin: 0em 3em;
 	border-collapse: collapse;
 }
 
