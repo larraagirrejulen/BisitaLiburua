@@ -31,22 +31,24 @@
 						<?php
 							$bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
 							foreach ($bisitak-> children() as $bisita){
+								echo "<tr>";
 
-									$data = $bisita["data"];
-									$izena = $bisita["izena"];
-									$iruzkina = $bisita["iruzkina"];
+								$data = $bisita[0]->data[0];
+								echo "<td>$data</td>";
+								$izena = $bisita[0]->izena[0];
+								echo "<td>$izena</td>";
+								if(isset($bisita[0]->posta[0]) && $bisita->posta->attributes()->erakutsi=="bai"){
+									$posta = $bisita[0]->posta[0];
+								}else{
+									$posta = "-";
+								}
+								echo "<td>$posta</td>";
+								$iruzkina = $bisita[0]->iruzkina[0];
+								echo "<td>$iruzkina</td>";
 
-									echo "<tr>";
-									echo "<td>$data</td><td>$izena</td><td>$iruzkina</td>";
-									echo "</tr>";
+								echo "</tr>";
 							}
 						 ?>
-						<tr>
-							<td>Julen</td><td>julen@gmail.com</td><td>iruzkin1</td>
-						</tr>
-						<tr>
-							<td>Xabier</td><td>xabier@gmail.com</td><td>iruzkin2</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>
