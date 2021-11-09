@@ -1,0 +1,19 @@
+body{
+	margin: 0px;
+	background-image: url("../images/iruzkinak_sartu.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.section{
+	text-align: center;
+	align-content: center;
+	padding-top: 15em;
+}
+
+.content_container{
+	margin: 0em 15em;
+	padding: 1em;
+	background: rgba(255, 255, 255, 0.90);
+	text-align: center;
+}

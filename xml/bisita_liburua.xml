@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bisitak SYSTEM "bisita_liburua.dtd">
+<bisitak azkenid="4">
+  <bisita id="1">
+    <data>12-16-2000 12:12:12</data>
+    <izena>Julen</izena>
+    <iruzkina>Probatzen</iruzkina>
+  </bisita>
+  <bisita id="2">
+    <data>11-09-2021 10:12:50</data>
+    <izena>a</izena>
+    <iruzkina>probatzen</iruzkina>
+  </bisita>
+  <bisita id="3">
+    <data>11-09-2021 10:18:31</data>
+    <izena>a</izena>
+    <iruzkina>probatzen</iruzkina>
+    <posta erakutsi="ez">julen@gmail.com</posta>
+  </bisita>
+  <bisita id="4">
+    <data>11-09-2021 10:18:49</data>
+    <izena>a</izena>
+    <iruzkina>probatzen</iruzkina>
+    <posta erakutsi="bai">julen@gmail.com</posta>
+  </bisita>
+</bisitak>
