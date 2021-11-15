@@ -51,6 +51,48 @@
 						 ?>
 					</tbody>
 				</table>
+				<br>
+				<hr width="300px">
+				<br>
+				<form class="formularioa" name="formularioa" enctype="multipart/form-data" method="post" action="../php/iruzkinak_ikusi.php">
+					<label for='izena'>Erabiltzailearen izena adierazi: </label>
+			    <input type='text' name='izena' id='izena' value=""><br><br>
+
+					<input type='submit' name='bidali' id='bidali' value='Erabiltzailearen iruzkinak ikusi'>
+				</form><br>
+				<?php
+					if(isset($_POST['izena'])){
+						echo "<table class='erabiltzaile_taula'>
+									<thead>
+										<tr>
+											<th>Data</th><th>Posta</th><th>Iruzkina</th>
+										</tr>
+									</thead>
+									<tbody> ";
+						$bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
+						foreach ($bisitak-> children() as $bisita){
+							$izena = $bisita[0]->izena[0];
+							if($izena == $_POST['izena']){
+								echo "<tr>";
+
+								$data = $bisita[0]->data[0];
+								echo "<td>$data</td>";
+								if(isset($bisita[0]->posta[0]) && $bisita->posta->attributes()->erakutsi=="bai"){
+									$posta = $bisita[0]->posta[0];
+								}else{
+									$posta = "-";
+								}
+								echo "<td>$posta</td>";
+								$iruzkina = $bisita[0]->iruzkina[0];
+								echo "<td>$iruzkina</td>";
+
+								echo "</tr>";
+							}
+						}
+						echo "</tbody>
+									</table>";
+					}
+				 ?>
 			</div>
 		</section>
 	</body>

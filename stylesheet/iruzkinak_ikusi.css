@@ -27,7 +27,19 @@ body{
 	border-collapse: collapse;
 }
 
+.erabiltzaile_taula{
+	display: inline-block;
+	padding: 1em;
+	margin: 0em 3em;
+	border-collapse: collapse;
+}
+
 .taula th, td{
+	padding: 6px;
+	border: 1px solid black;
+}
+
+.erabiltzaile_taula th, td{
 	padding: 6px;
 	border: 1px solid black;
 }
@@ -36,7 +48,15 @@ body{
 	background-color: grey;
 }
 
+.erabiltzaile_taula th{
+	background-color: grey;
+}
+
 .taula td{
+	background-color: #D4F7F7;
+}
+
+.erabiltzaile_taula td{
 	background-color: #D4F7F7;
 }
 
