@@ -4,8 +4,6 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_ikusi.css"/>
 		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
-		<script src='../scripts/formularioa_balioztatu.js'></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<header class="home">
@@ -51,55 +49,16 @@
 						 ?>
 					</tbody>
 				</table>
-				<br>
-				<hr width="300px">
-				<br>
+				<br><hr width="300px"><br>
 				<form class="formularioa" name="formularioa" enctype="multipart/form-data" method="post" action="../php/iruzkinak_ikusi.php">
 					<label for='izena'>Erabiltzailearen izena adierazi: </label>
 			    <input type='text' name='izena' id='izena' value=""><br><br>
 
 					<input type='submit' name='bidali' id='bidali' value='Erabiltzailearen iruzkinak ikusi'>
-				</form><br>
-				<table class='erabiltzaile_taula'>
-					<thead>
-						<tr>
-							<th>Data</th><th>Posta</th><th>Iruzkina</th>
-						</tr>
-					</thead>
-					<tbody>
-				<?php
-					if(isset($_POST['izena'])){
-						$bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
-						$aurkitua = 0;
-						foreach ($bisitak-> children() as $bisita){
-							$izena = $bisita[0]->izena[0];
-							if($izena == $_POST['izena']){
-								$aurkitua = 1;
-								echo "<tr>";
+				</form>
 
-								$data = $bisita[0]->data[0];
-								echo "<td>$data</td>";
-								if(isset($bisita[0]->posta[0]) && $bisita->posta->attributes()->erakutsi=="bai"){
-									$posta = $bisita[0]->posta[0];
-								}else{
-									$posta = "-";
-								}
-								echo "<td>$posta</td>";
-								$iruzkina = $bisita[0]->iruzkina[0];
-								echo "<td>$iruzkina</td>";
+				<?php include 'erabiltzaile_taula.php' ?>
 
-								echo "</tr>";
-							}
-						}
-						if (!$aurkitua) {
-							echo "<tr><td>-</td><td>-</td><td>-</td></tr>";
-						}
-					}else{
-						echo "<tr><td>-</td><td>-</td><td>-</td></tr>";
-					}
-				 ?>
-				 </tbody>
-			</table>
 			</div>
 		</section>
 	</body>
