@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_ikusi.css"/>
 		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src='../scripts/iruzkin_osoa_ajax.js'></script>
 	</head>
 	<body>
 		<header class="home">
@@ -19,6 +21,7 @@
 		<section class="table_section" id="table_section">
 			<div class="table_container">
 				<h1 class="titulu1">IRUZKINAK</h1>
+				<h4>(iruzkinetan klik egin gehiago/gutxiago ikusteko)</h4>
 				<table class="taula">
 					<thead>
 						<tr>
@@ -28,9 +31,11 @@
 					<tbody>
 						<?php
 							$bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
+							$iruz = 0;
 							foreach ($bisitak-> children() as $bisita){
-								echo "<tr>";
+								$iruz += 1;
 
+								echo "<tr>";
 								$data = $bisita[0]->data[0];
 								echo "<td>$data</td>";
 								$izena = $bisita[0]->izena[0];
@@ -42,7 +47,12 @@
 								}
 								echo "<td>$posta</td>";
 								$iruzkina = $bisita[0]->iruzkina[0];
-								echo "<td>$iruzkina</td>";
+								if(strlen($iruzkina) > 20){
+									$iruzkina = substr($iruzkina, 0, 17)."...";
+									echo "<td id='$iruz' onclick='iruzkinOsoa($iruz)'>$iruzkina</td>";
+								}else {
+									echo "<td>$iruzkina</td>";
+								}
 
 								echo "</tr>";
 							}

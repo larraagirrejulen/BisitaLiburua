@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE bisitak SYSTEM "bisita_liburua.dtd">
-<bisitak azkenid="4">
+<bisitak azkenid="5">
   <bisita id="1">
     <data>12-16-2000 12:12:12</data>
     <izena>Julen</izena>
@@ -22,5 +22,11 @@
     <izena>a</izena>
     <iruzkina>probatzen</iruzkina>
     <posta erakutsi="bai">julen@gmail.com</posta>
+  </bisita>
+  <bisita id="5">
+    <data>11-16-2021 09:00:04</data>
+    <izena>lorem</izena>
+    <iruzkina>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor convallis accumsan. Etiam et tristique felis. Sed scelerisque nibh vitae neque posuere, faucibus convallis tellus imperdiet. Quisque placerat, justo et dignissim lacinia, felis libero fringilla lacus, ut maximus nisl augue et orci. Cras iaculis lorem nulla, nec suscipit mauris consectetur eu. Pellentesque auctor lectus nulla, vitae molestie dolor tincidunt sed. Nunc pharetra libero a nulla suscipi
+    </iruzkina>
   </bisita>
 </bisitak>

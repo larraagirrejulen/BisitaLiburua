@@ -29,7 +29,7 @@
 			<nav class="navBar">
 				<a class="active" href="../html/main.html">BISITA-LIBURUA</a>
 				<a href="../html/iruzkinak_sartu.html">Iruzkinak Sartu</a>
-				<a href="../html/iruzkinak_ikusi.html">Iruzkinak Ikusi</a>
+				<a href="../html/iruzkinak_ikusi.php">Iruzkinak Ikusi</a>
 				<div class="navRight">
 					<a href="../html/about_us.html">ABOUT US</a>
 				</div>
