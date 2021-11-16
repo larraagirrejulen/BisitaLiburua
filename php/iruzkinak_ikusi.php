@@ -2,8 +2,8 @@
 	<head>
 		<title>SZA 3.Gaiko lehen laborategia</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../stylesheet/iruzkinak_ikusi.css"/>
-		<link rel="stylesheet" type="text/css" href="../stylesheet/navigation.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iruzkinak_ikusi.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/navigation.css"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src='../scripts/iruzkin_osoa_ajax.js'></script>
 	</head>
@@ -67,7 +67,53 @@
 					<input type='submit' name='bidali' id='bidali' value='Erabiltzailearen iruzkinak ikusi'>
 				</form>
 
-				<?php include 'erabiltzaile_taula.php' ?>
+				<table class="erabiltzaile_taula">
+				  <thead>
+				    <tr>
+				      <th>Data</th><th>Posta</th><th>Iruzkina</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				<?php
+				  if(isset($_POST['izena'])){
+				    $bisitak = simplexml_load_file('../xml/bisita_liburua.xml');
+				    $aurkitua = 0;
+				    foreach ($bisitak-> children() as $bisita){
+							$iruz += 1;
+				      $izena = $bisita[0]->izena[0];
+				      if($izena == $_POST['izena']){
+				        $aurkitua = 1;
+				        echo "<tr>";
+
+				        $data = $bisita[0]->data[0];
+				        echo "<td>$data</td>";
+				        if(isset($bisita[0]->posta[0]) && $bisita->posta->attributes()->erakutsi=="bai"){
+				          $posta = $bisita[0]->posta[0];
+				        }else{
+				          $posta = "-";
+				        }
+				        echo "<td>$posta</td>";
+				        $iruzkina = $bisita[0]->iruzkina[0];
+
+								if(strlen($iruzkina) > 20){
+									$iruzkina = substr($iruzkina, 0, 17)."...";
+									echo "<td id='$iruz' onclick='iruzkinOsoa($iruz)'>$iruzkina</td>";
+								}else {
+									echo "<td>$iruzkina</td>";
+								}
+
+				        echo "</tr>";
+				      }
+				    }
+				    if (!$aurkitua) {
+				      echo "<tr><td>-</td><td>-</td><td>-</td></tr>";
+				    }
+				  }else{
+				    echo "<tr><td>-</td><td>-</td><td>-</td></tr>";
+				  }
+				 ?>
+				 </tbody>
+				</table>
 
 			</div>
 		</section>
